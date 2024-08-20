@@ -10,7 +10,7 @@ function HomePage() {
       <div className="p-6 flex flex-col justify-between items-center">
         <Typography variant="subtitle" className="font-light">Hello, I&apos;m </Typography>
         <Typography variant="title">Danilo Marchesani</Typography>
-        <Typography variant="subtitle" className="font-bold text-transparent gradient-text animate-gradient">Frontend Software Engineer</Typography>
+        <Typography variant="subtitle" className="font-bold text-transparent gradient-text animate-gradient text-2xl scale-125">Frontend Software Engineer</Typography>
         <Typography>
           I enjoy working with the Node.js stack and love contributing to the
           open-source community, where I can both share my skills and learn from
