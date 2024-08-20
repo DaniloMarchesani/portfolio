@@ -17,11 +17,40 @@
 }
 
 body {
-  background-color: var(--foreground-rgb);
+  background-color: #fefefe;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #a855f7, #ec4899, #eab308, #a855f7, #ec4899, #eab308);
+  background-size: 300% 300%;
+  background-clip: text;
+}
+
+@keyframes gradient-x {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
+
+.gradient-bg {
+  background: linear-gradient(to right, #a855f7, #ec4899, #eab308, #a855f7, #ec4899, #eab308);
+  background-size: 300% 300%;
+
 }

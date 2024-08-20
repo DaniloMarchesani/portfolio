@@ -11,13 +11,13 @@ const redressed = Redressed({
 
 export const Navbar: FC = () => {
   return (
-    <nav className={`${redressed.className} w-full flex justify-center items-center p-2 mt-4`}>
+    <nav className={`${redressed.className} w-full flex justify-center items-center p-2 mt-4 fixed top-0 left-0`}>
         <ul className='text-2xl flex gap-10'>
-            <li><Link href={"#"}>Home</Link></li>
-            <li><Link href={"#"}>Works</Link></li>
-            <li><Link href={"#"}>Skills</Link></li>
-            <li><Link href={"#"}>About me</Link></li>
-            <li><Link href={"#"}>Contact</Link></li>
+            <li><Link href={"#home"}>Home</Link></li>
+            <li><Link href={"#works"}>Works</Link></li>
+            <li><Link href={"#skills"}>Skills</Link></li>
+            <li><Link href={"#about"}>About me</Link></li>
+            <li><Link href={"#contact"}>Contact</Link></li>
         </ul>
     </nav>
   )
