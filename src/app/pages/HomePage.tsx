@@ -80,6 +80,18 @@ function HomePage() {
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
               alt="tailwindcss"
             />
+            <Image
+              width={40}
+              height={40}
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+              alt="git"
+            />
+            <Image
+              width={40}
+              height={40}
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+              alt="azure"
+            />
           </div>
         </div>
 
