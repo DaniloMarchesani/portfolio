@@ -1,8 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import me from "@/app/assets/me.png";
-import { Button, Typography } from "../_shared/components";
-import { ChevronRight } from "lucide-react";
+import { Typography } from "../_shared/components";
 
 function HomePage() {
   return (
