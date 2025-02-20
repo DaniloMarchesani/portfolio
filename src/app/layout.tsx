@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Container from "./ui/components/Container";
 import Header from "./ui/components/Header";
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Danilo Marchesani",
   description: "My portfolio a little safe place for me",
 };
+
+const inter = Inter({
+  style: "normal",
+  subsets: ["latin"],
+  weight: ["400", "500", "500", "700"],
+});
 
 export default function RootLayout({
   children,
@@ -21,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistMono.variable} antialiased`}>
+      <body className={`${inter.className} antialiased`}>
         <Container>
           <Header />
           {children}

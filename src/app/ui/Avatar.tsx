@@ -10,10 +10,12 @@ export default function Avatar() {
         <Text variant="paragraph" className="text-sm font-bold">
           Danilo Marchesani
         </Text>
-        <Text className="text-xs text-blue-500">Software Engineer</Text>
+        <Text className="text-xs text-blue-600 dark:text-red-400">
+          Software Engineer
+        </Text>
         <Text
           variant="paragraph"
-          className="text-xs text-neutral-400 dark:text-neutral-400 flex gap-1 items-center justify-center align-middle"
+          className="text-xs text-neutral-500 dark:text-neutral-300 flex gap-1 items-center justify-center align-middle"
         >
           Tokyo, Edogawa-ku, Japan
           <Globe className="h-3 w-3" />
