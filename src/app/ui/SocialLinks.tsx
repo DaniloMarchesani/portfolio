@@ -13,7 +13,7 @@ export default function SocialLinks() {
               alt="x"
               width={25}
               height={25}
-              className="opacity-20 hover:opacity-100"
+              className="opacity-30 hover:opacity-100"
             />
           </Link>
         </li>
@@ -24,7 +24,7 @@ export default function SocialLinks() {
               alt="linkedin"
               width={25}
               height={25}
-              className="opacity-20 hover:opacity-100"
+              className="opacity-30 hover:opacity-100"
             />
           </Link>
         </li>
@@ -35,7 +35,7 @@ export default function SocialLinks() {
               alt="github"
               width={25}
               height={25}
-              className="opacity-20 hover:opacity-100"
+              className="opacity-30 hover:opacity-100"
             />
           </Link>
         </li>

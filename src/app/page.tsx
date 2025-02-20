@@ -1,12 +1,9 @@
-import Container from "./ui/components/Container";
-import Header from "./ui/components/Header";
+import Hero from "./ui/Hero";
 
 export default function Home() {
   return (
-    <main>
-      <Container>
-        <Header />
-      </Container>
+    <main className="flex flex-col items-center justify-center p-2">
+      <Hero />
     </main>
   );
 }

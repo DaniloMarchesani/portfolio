@@ -30,7 +30,9 @@ export default function Text({ children, className, variant }: IText) {
       return <h4 className={`${className} text-md md:text-md `}>{children}</h4>;
     case "muted":
       return (
-        <p className={`${className} text-sm md:text-base text-gray-500`}>
+        <p
+          className={`${className} text-sm md:text-base text-neutral-700 dark:text-neutral-300`}
+        >
           {children}
         </p>
       );
