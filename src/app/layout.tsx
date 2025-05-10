@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Container from "./ui/components/Container";
-import Header from "./ui/components/Header";
+import Footer from "./ui/components/footer";
+import Header from "./ui/components/header";
+import TerminalButton from "./ui/components/terminal-toggle";
 
 export const metadata: Metadata = {
   title: "Danilo Marchesani",
@@ -22,11 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} antialiased tracking-tight`}>
         <Container>
           <Header />
           {children}
+          <Footer />
         </Container>
+        <TerminalButton />
       </body>
     </html>
   );

@@ -38,7 +38,7 @@ export default function Text({ children, className, variant }: IText) {
     case "muted":
       return (
         <p
-          className={`${className} text-sm md:text-base text-neutral-700 dark:text-neutral-300`}
+          className={`${className} text-sm text-neutral-700 dark:text-neutral-500`}
         >
           {children}
         </p>
