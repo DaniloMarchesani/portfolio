@@ -1,43 +1,20 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Mail } from "lucide-react";
+import { Linkedin, Github, Twitter, Mail } from "lucide-react";
 
 export default function SocialLinks() {
   return (
     <>
-      <ul className="flex items-center justify-around gap-2">
+      <ul className="flex items-center justify-around gap-2 relative">
         <li>
-          <Link href={"#"}>
-            <Image
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg"
-              alt="x"
-              width={25}
-              height={25}
-              className="opacity-20 hover:opacity-100"
-            />
-          </Link>
+          <Linkedin className="h-5 w-5 my-2 text-neutral-300 dark:text-neutral-700 hover:text-[--foreground]" />
         </li>
         <li>
-          <Link href={"#"}>
-            <Image
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg"
-              alt="linkedin"
-              width={25}
-              height={25}
-              className="opacity-20 hover:opacity-100"
-            />
-          </Link>
+          <Github className="h-5 w-5 my-2 text-neutral-300 dark:text-neutral-700 hover:text-[--foreground]" />
         </li>
         <li>
-          <Link href={"#"}>
-            <Image
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-              alt="github"
-              width={25}
-              height={25}
-              className="opacity-20 hover:opacity-100"
-            />
-          </Link>
+          <Twitter className="h-5 w-5 my-2 text-neutral-300 dark:text-neutral-700 hover:text-[--foreground]" />
+        </li>
+        <li>
+          <Mail className="h-5 w-5 my-2 text-neutral-300 dark:text-neutral-700 hover:text-[--foreground]" />
         </li>
       </ul>
     </>
