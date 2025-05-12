@@ -4,11 +4,10 @@ import "./globals.css";
 import Container from "./ui/components/Container";
 import Footer from "./ui/components/footer";
 import Header from "./ui/components/header";
-import TerminalButton from "./ui/components/terminal-toggle";
 
 export const metadata: Metadata = {
   title: "Danilo Marchesani",
-  description: "My portfolio a little safe place for me",
+  description: "My portfolio a little corner of the web.",
 };
 
 const inter = Inter({
@@ -23,14 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} antialiased tracking-tight`}>
         <Container>
           <Header />
           {children}
           <Footer />
         </Container>
-        <TerminalButton />
       </body>
     </html>
   );

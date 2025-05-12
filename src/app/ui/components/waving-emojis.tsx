@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useState } from "react"
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 interface WavingEmojiProps {
-  emoji?: string
-  size?: "small" | "medium" | "large"
-  autoPlay?: boolean
-  className?: string
+  emoji?: string;
+  size?: "small" | "medium" | "large";
+  autoPlay?: boolean;
+  className?: string;
 }
 
 export default function WavingEmoji({
@@ -16,14 +16,14 @@ export default function WavingEmoji({
   autoPlay = true,
   className = "",
 }: WavingEmojiProps) {
-  const [isWaving, setIsWaving] = useState(autoPlay)
+  const [isWaving, setIsWaving] = useState(autoPlay);
 
   // Size mapping
   const sizeMap = {
     small: "text-xl",
     medium: "text-2xl",
     large: "text-4xl",
-  }
+  };
 
   // Animation variants
   const waveVariants = {
@@ -40,7 +40,7 @@ export default function WavingEmoji({
     idle: {
       rotate: 0,
     },
-  }
+  };
 
   return (
     <motion.span
@@ -51,10 +51,10 @@ export default function WavingEmoji({
       onHoverEnd={() => !autoPlay && setIsWaving(false)}
       onClick={() => !autoPlay && setIsWaving(true)}
       onAnimationComplete={() => {
-        if (!autoPlay) setIsWaving(false)
+        if (!autoPlay) setIsWaving(false);
       }}
     >
       {emoji}
     </motion.span>
-  )
+  );
 }
