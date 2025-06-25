@@ -49,7 +49,7 @@ export default function MyStack() {
     },
   ];
   return (
-    <section className="w-full py-16 px-8 md:px-0">
+    <main className="w-full py-16 px-8 md:px-0">
       <Link
         href="/"
         className="font-light text-sm text-neutral-500 hover:text-blue-500"
@@ -62,7 +62,7 @@ export default function MyStack() {
       <h2 className="text-lg font-medium mb-8 tracking-tighter mt-8">
         My Stack
       </h2>
-      <h3 className="text-neutral-300 mb-10">
+      <h3 className="dark:text-neutral-30 mb-10">
         Here&apos;s where I&apos;m currently most productive:
       </h3>
       {stacks.map((stack, index) => (
@@ -74,12 +74,14 @@ export default function MyStack() {
                 <div>
                   <ChevronsRight className="h-4 mt-1 opacity-50" />
                 </div>
-                <p className="text-neutral-400">{description}</p>
+                <p className="text-neutral-700 dark:text-neutral-300 ">
+                  {description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       ))}
-    </section>
+    </main>
   );
 }

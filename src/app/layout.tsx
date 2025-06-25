@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Container from "./ui/components/Container";
 import Footer from "./ui/components/footer";
-import Header from "./ui/components/header";
+import Header from "./ui/components/Header";
 
 export const metadata: Metadata = {
   title: "Danilo Marchesani",
