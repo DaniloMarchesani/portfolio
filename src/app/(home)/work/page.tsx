@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Work() {
   return (
-    <main className=" my-14">
+    <main className=" my-14 px-8 md:px-0">
       <Link
         href="/"
         className="font-light text-sm text-neutral-500 hover:text-blue-500"
