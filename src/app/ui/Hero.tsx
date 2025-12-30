@@ -33,7 +33,7 @@ export default function Hero() {
     >
       <motion.h1
         variants={item}
-        className="text-center md:text-left text-xl md:text-2xl font-medium"
+        className="text-center md:text-left text-xl md:text-2xl"
       >
         Hello World <WavingEmoji />
       </motion.h1>
@@ -45,30 +45,38 @@ export default function Hero() {
         <p>
           I&apos;m a{" "}
           <Link href={"/about"} className="text-blue-500 hover:text-blue-600">
-            developer
+            full-stack developer
           </Link>
-          , optimist, and community builder currently living in Tokyo. <br /> I
-          work as software engineer at{" "}
+          , optimist, and community builder living in the heart of Tokyo. 🗼
+          <br />
+          <br />
+          Currently crafting digital experiences at{" "}
           <Link
-            href="https://www.linkedin.com/company/futura-dev/"
+            href="https://www.futura-dev.com/"
             target="_blank"
             className="text-blue-500 hover:text-blue-600"
           >
             @Futura
           </Link>
-          , where I am involved in developing producs using{" "}
-          <span aria-label="nextjs" className="text-blue-500">
-            <Link href={"/stack"}>Next.js</Link>
-          </span>{" "}
-          Web framework of React and{" "}
-          <span aria-label="Nodejs" className="text-blue-500">
-            <Link href={"/stack"}>Node.js</Link>
-          </span>{" "}
+          , where I bring ideas to life using modern tech like{" "}
+          <Link href={"/stack"} className="text-blue-500 hover:text-blue-600">
+            React
+          </Link>
+          ,{" "}
+          <Link href={"/stack"} className="text-blue-500 hover:text-blue-600">
+            Next.js
+          </Link>
+          ,{" "}
+          <Link href={"/stack"} className="text-blue-500 hover:text-blue-600">
+            Node.js
+          </Link>
           , and{" "}
-          <span aria-label="Java" className="text-blue-500">
-            <Link href={"/stack"}>Java</Link>
-          </span>{" "}
-          for build server side applications.
+          <Link href={"/stack"} className="text-blue-500 hover:text-blue-600">
+            Java Spring Boot
+          </Link>
+          .
+          <br />
+          <br />I love building products that make a difference. ✨
         </p>
       </motion.div>
     </motion.section>
