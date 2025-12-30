@@ -31,7 +31,7 @@ export default function WavingEmoji({
       rotate: [0, 14, -8, 14, -4, 10, 0],
       transition: {
         duration: 2,
-        ease: "easeInOut",
+        ease: [0.42, 0, 0.58, 1] as [number, number, number, number],
         times: [0, 0.15, 0.3, 0.45, 0.6, 0.8, 1],
         repeat: autoPlay ? Number.POSITIVE_INFINITY : 0,
         repeatDelay: autoPlay ? 1.5 : 0,
