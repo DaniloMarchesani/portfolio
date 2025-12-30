@@ -1,43 +1,21 @@
 "use client";
 
-import { useInView, motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { ChevronsRight } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
 
-export default function CodeSection() {
+export default function OpenSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const codeLinks = [
     {
-      title: "OpenWikipedia Backend",
-      link: "https://github.com/DaniloMarchesani/openwikipedia-backend",
+      title: "Pfree CLI",
+      link: "https://github.com/DaniloMarchesani/pfree",
       description:
-        "Open Wikipedia is a RESTful API application built with Spring Boot that allows user authentication, registration, and the management of favorite articles. Articles can be saved, modified, and deleted in a NoSQL database. The application also features version control for articles, creating snapshots of previous versions when they are modified, allowing for future restoration",
-      techStack: [
-        "Spring Boot",
-        "Java",
-        "NoSQL",
-        "RESTful",
-        "MongoDB",
-        "Spring Security",
-      ],
-    },
-    {
-      title: "OpenWikipedia",
-      link: "https://github.com/DaniloMarchesani/openwikipedia",
-      description:
-        "Welcome to the Open Wikipeida, a React-based application that allows users to fetch, save, modify, and delete articles from Wikimedia's Free API. This app serves as a personal archive where you can keep your favorite articles for future reference.",
-      techStack: [
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Axios",
-        "Zustand",
-        "React Router",
-        "Zod",
-      ],
+        "A simple and powerful CLI tool to quickly free up ports by killing the processes using them.",
+      techStack: ["Nodejs", "Typescript", "Commander"],
     },
   ];
 
@@ -53,7 +31,7 @@ export default function CodeSection() {
 
   const item = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    show: { opacity: 1, y: 0 },
   };
 
   return (
@@ -65,7 +43,7 @@ export default function CodeSection() {
       className="w-full"
     >
       <motion.h2 variants={item} className="text-lg font-medium mb-4">
-        Code
+        Open Source
       </motion.h2>
       <div className="flex flex-col">
         <ul>
