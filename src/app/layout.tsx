@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import { Inter } from "next/font/google";
 import Container from "./ui/components/Container";
 import Footer from "./ui/components/footer";
-import Header from "./ui/components/Header";
+import Header from "./ui/components/header";
 
 export const metadata: Metadata = {
   title: "Danilo Marchesani",
