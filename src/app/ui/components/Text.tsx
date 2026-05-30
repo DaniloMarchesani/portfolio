@@ -1,59 +1,64 @@
-import { ReactNode } from "react";
+import { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
+import { inter } from "../utils/fonts";
+
+type TextTag = "p" | "span" | "strong" | "em" | "small";
 
 interface IText {
-  variant?:
-    | "title"
-    | "subtitle"
-    | "large"
-    | "medium"
-    | "muted"
-    | "paragraph"
-    | "small";
+  as?: TextTag;
+  variant?: "muted" | "paragraph" | "small" | "label";
   children: ReactNode;
   className?: string;
 }
 
-export default function Text({ children, className, variant }: IText) {
+export default function Text<T extends TextTag = "p">({
+  as,
+  children,
+  className = "",
+  variant = "paragraph",
+  ...props
+}: IText & Omit<ComponentPropsWithoutRef<T>, keyof IText>) {
+  const Component = (as ??
+    (variant === "small" ? "small" : "p")) as ElementType;
+
   switch (variant) {
-    case "title":
-      return (
-        <h1 className={`text-3xl md:text-3xl font-medium ${className} `}>
-          {children}
-        </h1>
-      );
-    case "subtitle":
-      return (
-        <h2 className={`$text-xl md:text-2xl font-semibold ${className} `}>
-          {children}
-        </h2>
-      );
-    case "large":
-      return (
-        <h3 className={`${className} text-xl md:text-3xl font-semibold`}>
-          {children}
-        </h3>
-      );
-    case "medium":
-      return <h4 className={`${className} text-md md:text-md `}>{children}</h4>;
     case "muted":
       return (
-        <p
-          className={`${className} text-sm text-neutral-700 dark:text-neutral-500`}
+        <Component
+          className={`${inter.className} ${className} text-sm text-neutral-700 dark:text-neutral-500`}
+          {...props}
         >
           {children}
-        </p>
+        </Component>
       );
     case "small":
       return (
-        <p
-          className={`${className} text-xs md:text-sm text-neutral-800 dark:text-neutral-100`}
+        <Component
+          className={`${inter.className} ${className} text-xs md:text-sm text-neutral-800 dark:text-neutral-100`}
+          {...props}
         >
           {children}
-        </p>
+        </Component>
+      );
+    case "label":
+      return (
+        <Component
+          className={`${inter.className} ${className} text-sm font-medium`}
+          {...props}
+        >
+          {children}
+        </Component>
       );
     case "paragraph":
-      return <p className={`${className}`}>{children}</p>;
+      return (
+        <Component className={`${inter.className} ${className}`} {...props}>
+          {children}
+        </Component>
+      );
     default:
-      return <span className={`${className}`}>{children}</span>;
+      return (
+        <Component className={`${inter.className} ${className}`} {...props}>
+          {children}
+        </Component>
+      );
   }
 }

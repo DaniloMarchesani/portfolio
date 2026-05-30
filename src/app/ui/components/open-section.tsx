@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { ChevronsRight } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
+import Title from "./Title";
 
 export default function OpenSection() {
   const ref = useRef(null);
@@ -40,28 +41,30 @@ export default function OpenSection() {
       ref={ref}
       initial="hidden"
       animate={isInView ? "show" : "hidden"}
-      className="w-full"
+      className="w-full py-8"
     >
-      <motion.h2 variants={item} className="text-lg font-medium mb-4">
-        Open Source
-      </motion.h2>
+      <motion.div variants={item}>
+        <Title as="h2" className="mb-5 text-xl text-neutral-950 dark:text-neutral-50">
+          Open Source
+        </Title>
+      </motion.div>
       <div className="flex flex-col">
         <ul>
           {codeLinks.map((link, index) => (
-            <motion.li variants={item} key={index} className="mb-8">
+            <motion.li variants={item} key={index} className="mb-6">
               <p>
                 <Link
                   href={link.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 hover:text-blue-600"
+                  className="flex items-center gap-2 font-medium transition hover:text-blue-600"
                 >
-                  <ChevronsRight className="inline h-4 text-slate-500" />
+                  <ChevronsRight className="inline h-4 text-neutral-500" />
                   {link.title}
                 </Link>
               </p>
               {/* <p className="text-slate-300 mt-2 ml-7">{link.description}</p> */}
-              <p className="text-neutral-500 ml-7 text-sm">
+              <p className="ml-6 mt-1 text-sm text-neutral-500">
                 {link.techStack.join(", ")}
               </p>
             </motion.li>

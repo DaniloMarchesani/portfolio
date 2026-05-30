@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { inter } from "./ui/utils/fonts";
 import "./globals.css";
-import { Inter } from "next/font/google";
 import Container from "./ui/components/Container";
 import Footer from "./ui/components/footer";
 import Header from "./ui/components/header";
@@ -10,12 +10,6 @@ export const metadata: Metadata = {
   description: "My portfolio a little corner of the web.",
 };
 
-const inter = Inter({
-  style: "normal",
-  subsets: ["latin"],
-  weight: ["400", "500", "500", "700"],
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -23,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased tracking-tight`}>
+      <body className={`${inter.className} antialiased`}>
         <Container>
           <Header />
           {children}

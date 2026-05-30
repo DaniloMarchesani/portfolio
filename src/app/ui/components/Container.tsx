@@ -6,7 +6,7 @@ interface IContainerProps {
 
 export default function Container({ children }: IContainerProps) {
   return (
-    <div className=" flex flex-col max-w-[600px] min-h-screen my-5 mx-auto">
+    <div className="mx-auto flex min-h-screen w-full max-w-[620px] flex-col px-5 py-6 sm:px-8 md:px-0 md:py-8">
       {children}
     </div>
   );

@@ -3,6 +3,8 @@ import Link from "next/link";
 import WavingEmoji from "./components/waving-emojis";
 import { useRef } from "react";
 import { useInView, motion } from "framer-motion";
+import Title from "./components/Title";
+import Text from "./components/Text";
 
 export default function Hero() {
   const ref = useRef(null);
@@ -29,20 +31,22 @@ export default function Hero() {
       variants={container}
       initial="hidden"
       animate={isInView ? "show" : "hidden"}
-      className="text-wrap w-full flex flex-col mt-12 mb-6 md:mt-24 md:mb-12"
+      className="flex w-full flex-col pt-12 pb-8 md:pt-16 md:pb-10"
     >
-      <motion.h1
-        variants={item}
-        className="text-center md:text-left text-xl md:text-2xl"
-      >
-        Hello World <WavingEmoji />
-      </motion.h1>
+      <motion.div variants={item}>
+        <Title
+          as="h1"
+          className="max-w-xl text-2xl leading-tight text-neutral-950 md:text-3xl dark:text-neutral-50"
+        >
+          Hello World <WavingEmoji />
+        </Title>
+      </motion.div>
 
       <motion.div
         variants={item}
-        className="mt-6 flex flex-col gap-4 px-3 md:px-0 text-justify leading-relaxed"
+        className="mt-6 max-w-2xl text-pretty text-[15px] leading-7 text-neutral-700 dark:text-neutral-300"
       >
-        <p>
+        <Text>
           I&apos;m a{" "}
           <Link href={"/about"} className="text-blue-500 hover:text-blue-600">
             full-stack developer
@@ -77,7 +81,7 @@ export default function Hero() {
           .
           <br />
           <br />I love building products that make a difference. ✨
-        </p>
+        </Text>
       </motion.div>
     </motion.section>
   );
