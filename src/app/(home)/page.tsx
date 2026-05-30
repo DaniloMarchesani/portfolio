@@ -6,7 +6,7 @@ import Hero from "../ui/Hero";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-2 md:gap-0 items-center justify-center p-8">
+    <main className="flex flex-col">
       <Hero />
       <ExperienceHero />
       <OpenSection />
