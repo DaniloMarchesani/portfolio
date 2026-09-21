@@ -6,6 +6,12 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {},
+  theme: {
+    extend: {
+      fontFamily: {
+        mono: ["var(--font-geist-mono)", "ui-monospace", "monospace"],
+      },
+    },
+  },
   plugins: [],
 } satisfies Config;

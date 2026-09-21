@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
-import { inter } from "./ui/utils/fonts";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import Container from "./ui/components/Container";
 import Footer from "./ui/components/footer";
 import Header from "./ui/components/header";
+import { geistMono } from "./ui/utils/fonts";
+
+const geist = Geist({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Danilo Marchesani",
@@ -16,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased`}>
+    <html lang="en" className={`${geistMono.variable} scroll-smooth`}>
+      <body className={`${geist.className} antialiased`}>
         <Container>
           <Header />
           {children}

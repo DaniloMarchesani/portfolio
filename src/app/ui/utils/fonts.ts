@@ -1,9 +1,8 @@
-import { Inter, Playfair_Display } from "next/font/google";
+import { Geist_Mono, Playfair_Display } from "next/font/google";
 
-export const inter = Inter({
-  style: "normal",
+export const geistMono = Geist_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-geist-mono",
 });
 
 export const playfair = Playfair_Display({
