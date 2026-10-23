@@ -40,10 +40,7 @@ export default function Text<T extends TextTag = "p">({
       );
     case "label":
       return (
-        <Component
-          className={`${className} text-sm font-medium`}
-          {...props}
-        >
+        <Component className={`${className} text-sm font-medium`} {...props}>
           {children}
         </Component>
       );

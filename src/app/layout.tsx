@@ -5,6 +5,7 @@ import Container from "./ui/components/Container";
 import Footer from "./ui/components/footer";
 import Header from "./ui/components/header";
 import { geistMono } from "./ui/utils/fonts";
+import TokyoPainting from "./ui/components/TokyoLight";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistMono.variable} scroll-smooth`}>
       <body className={`${geist.className} antialiased`}>
-        <Container>
+        <Container aside={<TokyoPainting />}>
           <Header />
           {children}
           <Footer />

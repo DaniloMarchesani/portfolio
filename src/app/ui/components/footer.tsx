@@ -1,44 +1,27 @@
 import Link from "next/link";
 
+const links = [
+  { label: "X", href: "https://x.com/Dany_M95" },
+  { label: "GitHub", href: "https://github.com/DaniloMarchesani" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/danilo-marchesani/" },
+  { label: "Email", href: "mailto:marchesanidanilo@gmail.com" },
+];
+
 export default function Footer() {
   return (
-    <footer
-      id="contact"
-      className="flex w-full items-center justify-center py-8 text-center text-sm"
-    >
-      <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
-        <li>
-          <Link href="https://x.com/Dany_M95" target="_blank">
-            <p className="text-neutral-500 transition hover:text-blue-500">
-              @Dany_M95
-            </p>
-          </Link>
-        </li>
-        <li>
-          <Link href="https://github.com/DaniloMarchesani" target="_blank">
-            <p className="text-neutral-500 transition hover:text-blue-500">
-              Github
-            </p>
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="https://www.linkedin.com/in/danilo-marchesani/"
-            target="_blank"
-          >
-            <p className="text-neutral-500 transition hover:text-blue-500">
-              LinkedIn
-            </p>
-          </Link>
-        </li>
-
-        <li>
-          <Link href="mailto:marchesanidanilo@gmail.com" target="_blank">
-            <p className="text-neutral-500 transition hover:text-blue-500">
-              Email
-            </p>
-          </Link>
-        </li>
+    <footer id="contact" className="mt-16 text-sm">
+      <ul className="flex flex-wrap gap-x-5 gap-y-2">
+        {links.map((link) => (
+          <li key={link.label}>
+            <Link
+              href={link.href}
+              target="_blank"
+              className="text-neutral-500 transition-colors hover:text-neutral-950 dark:hover:text-neutral-50"
+            >
+              {link.label} ↗
+            </Link>
+          </li>
+        ))}
       </ul>
     </footer>
   );

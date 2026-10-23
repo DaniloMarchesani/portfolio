@@ -49,7 +49,7 @@ export default function MyStack() {
     },
   ];
   return (
-    <main className="w-full py-16 px-8 md:px-0">
+    <main>
       <Link
         href="/"
         className="font-light text-sm text-neutral-500 hover:text-blue-500"
@@ -59,24 +59,24 @@ export default function MyStack() {
           navigate back
         </div>
       </Link>
-      <h2 className="text-lg font-medium mb-8 tracking-tighter mt-8">
+      <h1 className="mt-8 mb-4 font-medium text-neutral-950 dark:text-neutral-50">
         My Stack
-      </h2>
-      <h3 className="dark:text-neutral-30 mb-10">
+      </h1>
+      <p className="mb-10">
         Here&apos;s where I&apos;m currently most productive:
-      </h3>
+      </p>
       {stacks.map((stack, index) => (
-        <div key={index} className="mb-16">
-          <h3 className="font-medium">{stack.title}</h3>
-          <div className="flex flex-col gap-4 mt-4">
+        <div key={index} className="mb-10">
+          <h2 className="font-medium text-neutral-950 dark:text-neutral-50">
+            {stack.title}
+          </h2>
+          <div className="mt-3 flex flex-col gap-3">
             {stack.descriptions.map((description, index) => (
               <div key={index} className="flex items-start justify-start gap-2">
                 <div>
                   <ChevronsRight className="h-4 mt-1 opacity-50" />
                 </div>
-                <p className="text-neutral-700 dark:text-neutral-300 ">
-                  {description}
-                </p>
+                <p>{description}</p>
               </div>
             ))}
           </div>
