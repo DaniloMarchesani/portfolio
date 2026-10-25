@@ -1,5 +1,5 @@
-import ProjectList, { Project } from "./ProjectList";
-import Section from "./Section";
+import ProjectList, { Project } from "@/components/ui/ProjectList";
+import Section from "@/components/ui/Section";
 
 const projects: Project[] = [
   {

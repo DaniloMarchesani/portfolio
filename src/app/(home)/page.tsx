@@ -1,17 +1,23 @@
-import MinimalAbout from "../ui/components/about-me";
-import CodeSection from "../ui/components/code-section";
-import OpenSection from "../ui/components/open-section";
-import ExperienceHero from "../ui/components/work-experience";
-import Hero from "../ui/Hero";
+import CodeSection from "@/components/sections/CodeSection";
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
+import OpenSection from "@/components/sections/OpenSection";
+import TopPainting from "@/components/layout/TopPainting";
+import WorkExperience from "@/components/sections/WorkExperience";
+import Hero from "@/components/sections/Hero";
+import Stack from "@/components/sections/Stack";
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col max-w-[600px]">
+      <TopPainting />
+      <Header />
       <Hero />
-      <ExperienceHero />
+      <WorkExperience />
+      <Stack />
       <OpenSection />
       <CodeSection />
-      <MinimalAbout />
+      <Footer />
     </main>
   );
 }

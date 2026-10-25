@@ -23,7 +23,7 @@ export default function Text<T extends TextTag = "p">({
     case "muted":
       return (
         <Component
-          className={`${className} text-sm text-neutral-700 dark:text-neutral-500`}
+          className={`${className} text-sm text-secondary`}
           {...props}
         >
           {children}
@@ -32,7 +32,7 @@ export default function Text<T extends TextTag = "p">({
     case "small":
       return (
         <Component
-          className={`${className} text-xs md:text-sm text-neutral-800 dark:text-neutral-100`}
+          className={`${className} text-xs md:text-sm text-copy`}
           {...props}
         >
           {children}

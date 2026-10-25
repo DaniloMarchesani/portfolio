@@ -1,4 +1,6 @@
+import { themeColors, cssVars } from "./src/styles/theme";
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 export default {
   content: [
@@ -8,10 +10,20 @@ export default {
   ],
   theme: {
     extend: {
+      colors: themeColors,
       fontFamily: {
         mono: ["var(--font-geist-mono)", "ui-monospace", "monospace"],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addBase }) => {
+      addBase({
+        ":root": cssVars("light"),
+        "@media (prefers-color-scheme: dark)": {
+          ":root": cssVars("dark"),
+        },
+      });
+    }),
+  ],
 } satisfies Config;

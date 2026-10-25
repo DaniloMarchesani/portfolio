@@ -1,5 +1,5 @@
 import { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
-import { playfair } from "../utils/fonts";
+import { playfair } from "@/lib/fonts";
 
 type TitleTag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 

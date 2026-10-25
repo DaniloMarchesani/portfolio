@@ -52,14 +52,14 @@ export default function MyStack() {
     <main>
       <Link
         href="/"
-        className="font-light text-sm text-neutral-500 hover:text-blue-500"
+        className="font-light text-sm text-nav transition-colors hover:text-nav-hover"
       >
         <div className="flex items-center">
           <ChevronLeft className="h-4 w-4" />
           navigate back
         </div>
       </Link>
-      <h1 className="mt-8 mb-4 font-medium text-neutral-950 dark:text-neutral-50">
+      <h1 className="mt-8 mb-4 font-medium text-heading">
         My Stack
       </h1>
       <p className="mb-10">
@@ -67,7 +67,7 @@ export default function MyStack() {
       </p>
       {stacks.map((stack, index) => (
         <div key={index} className="mb-10">
-          <h2 className="font-medium text-neutral-950 dark:text-neutral-50">
+          <h2 className="font-medium text-heading">
             {stack.title}
           </h2>
           <div className="mt-3 flex flex-col gap-3">

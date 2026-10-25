@@ -6,13 +6,13 @@ export default function Work() {
     <main>
       <Link
         href="/"
-        className="font-light text-sm text-neutral-500 hover:text-blue-500"
+        className="font-light text-sm text-nav transition-colors hover:text-nav-hover"
       >
         <div className="flex items-center">
           <ChevronLeft className="h-4 w-4" /> navigate back
         </div>
       </Link>
-      <h1 className="mt-8 font-medium text-neutral-950 dark:text-neutral-50">
+      <h1 className="mt-8 font-medium text-heading">
         Work Experience
       </h1>
       <p className="mt-4">
@@ -22,10 +22,10 @@ export default function Work() {
       </p>
 
       <div className="mt-10">
-        <h2 className="font-medium text-neutral-950 dark:text-neutral-50">
+        <h2 className="font-medium text-heading">
           Futura
         </h2>
-        <h3 className="text-sm text-neutral-500">
+        <h3 className="text-sm text-secondary">
           Software Engineer, 2024 - Present
         </h3>
         <p className="mt-4">
@@ -45,10 +45,10 @@ export default function Work() {
       </div>
 
       <div className="mt-10">
-        <h2 className="font-medium text-neutral-950 dark:text-neutral-50">
+        <h2 className="font-medium text-heading">
           IdeaIT
         </h2>
-        <h3 className="text-sm text-neutral-500">Software Developer, 2024</h3>
+        <h3 className="text-sm text-secondary">Software Developer, 2024</h3>
         <p className="mt-4">
           IdeaIT is a company that builds applications tailored for it&apos;s
           clients.

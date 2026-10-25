@@ -1,4 +1,4 @@
-import Section from "./Section";
+import Section from "@/components/ui/Section";
 
 type Experience = {
   title: string;
@@ -29,12 +29,12 @@ export default function WorkExperience() {
             className="flex items-baseline justify-between gap-4"
           >
             <span className="min-w-0 truncate">
-              <span className="text-neutral-950 dark:text-neutral-50">
+              <span className="text-heading">
                 {experience.company}
               </span>
-              <span className="text-neutral-500"> · {experience.title}</span>
+              <span className="text-secondary"> · {experience.title}</span>
             </span>
-            <span className="shrink-0 text-sm tabular-nums text-neutral-500">
+            <span className="shrink-0 text-sm tabular-nums text-secondary">
               {experience.period}
             </span>
           </li>

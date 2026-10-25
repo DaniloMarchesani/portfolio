@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: var(--text-copy);
+  background: var(--bg);
+  font-family: Geist, Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: #fde68a;
+  color: #101829;
+}

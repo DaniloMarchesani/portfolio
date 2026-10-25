@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 const links = [
-  { label: "X", href: "https://x.com/Dany_M95" },
   { label: "GitHub", href: "https://github.com/DaniloMarchesani" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/danilo-marchesani/" },
   { label: "Email", href: "mailto:marchesanidanilo@gmail.com" },
@@ -16,7 +15,7 @@ export default function Footer() {
             <Link
               href={link.href}
               target="_blank"
-              className="text-neutral-500 transition-colors hover:text-neutral-950 dark:hover:text-neutral-50"
+              className="text-nav transition-colors hover:text-nav-hover"
             >
               {link.label} ↗
             </Link>

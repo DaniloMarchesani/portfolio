@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { linkClass } from "../utils/styles";
+import { linkClass } from "@/lib/styles";
 
 export type Project = {
   title: string;
@@ -20,7 +20,7 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
           >
             {project.title}
           </Link>
-          <p className="text-sm text-neutral-500">
+          <p className="text-sm text-secondary">
             {project.techStack.join(", ")}
           </p>
         </li>

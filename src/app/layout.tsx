@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import "./globals.css";
-import Container from "./ui/components/Container";
-import Footer from "./ui/components/footer";
-import Header from "./ui/components/header";
-import { geistMono } from "./ui/utils/fonts";
-import TokyoPainting from "./ui/components/TokyoLight";
+import "@/styles/globals.css";
+import Container from "@/components/layout/Container";
+import { geistMono } from "@/lib/fonts";
+import Painting from "@/components/layout/Painting";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -24,11 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistMono.variable} scroll-smooth`}>
       <body className={`${geist.className} antialiased`}>
-        <Container aside={<TokyoPainting />}>
-          <Header />
-          {children}
-          <Footer />
-        </Container>
+        <Container aside={<Painting />}>{children}</Container>
       </body>
     </html>
   );
